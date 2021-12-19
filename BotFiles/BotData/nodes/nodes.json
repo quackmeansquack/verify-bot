@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "verify",
+      "guid": "fa4cb6a7-ecf4-4709-9b31-a7354f337d38",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "bdb88c72-0edd-4097-a909-54ac3213d0d1"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 221,
+      "y": 261
+    },
+    {
+      "type": "response",
+      "name": "remove cripple",
+      "guid": "bdb88c72-0edd-4097-a909-54ac3213d0d1",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "12392747-9bdc-43e4-9415-0d85f0e993f0"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "fa4cb6a7-ecf4-4709-9b31-a7354f337d38"
+        }
+      ],
+      "x": 443,
+      "y": 258,
+      "rtype": "User Action",
+      "rsubtype": "Remove Role From User",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "Cripple",
+        "fuck you"
+      ],
+      "formnames": [
+        "user",
+        "roleName",
+        "reason"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "cripple response",
+      "guid": "12392747-9bdc-43e4-9415-0d85f0e993f0",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bdb88c72-0edd-4097-a909-54ac3213d0d1"
+        }
+      ],
+      "x": 675,
+      "y": 249,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Verification",
+        "",
+        "",
+        "",
+        "",
+        "Verification compete.",
+        "${dbsVars.CommandAuthor.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}

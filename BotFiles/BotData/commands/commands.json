@@ -1,0 +1,38 @@
+{
+  "command": [
+    {
+      "name": "verify",
+      "actions": [
+        {
+          "name": "remove cripple",
+          "category": "User Action",
+          "type": "Remove Role From User",
+          "messageActionRows": [],
+          "user": "${dbsVars.CommandAuthor.id}",
+          "rolename": "Cripple",
+          "reason": "fuck you"
+        },
+        {
+          "name": "cripple response",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Verification",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Verification compete.",
+          "thumbnail": "${dbsVars.CommandAuthor.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
